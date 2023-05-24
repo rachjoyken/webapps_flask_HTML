@@ -30,7 +30,7 @@ apply_example_routes(app)
 
 @app.route('/goodbye', methods=['GET'])
 def get_goodbye():
-    return render_template('goodbye.html', goodbye='Bye!')
+    return render_template('goodbye.html', message='Bye!')
 
 # These lines start the server if you run this file directly
 # They also start the server configured to use the test database
