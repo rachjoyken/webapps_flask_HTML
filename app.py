@@ -26,10 +26,17 @@ def get_emoji():
 from example_routes import apply_example_routes
 apply_example_routes(app)
 
-# == End Example Code ==
+#Exercise Two:
+
+@app.route('/goodbye', methods=['GET'])
+def get_goodbye():
+    return render_template('goodbye.html', goodbye='Bye!')
 
 # These lines start the server if you run this file directly
 # They also start the server configured to use the test database
 # if started in test mode.
 if __name__ == '__main__':
     app.run(debug=True, port=int(os.environ.get('PORT', 5000)))
+
+
+
